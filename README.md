@@ -1,3 +1,8 @@
+## Hooks Todos
+## Udemy React Hooks Course 
+
+Learning react hooks from [Udemy React Hooks Course](https://www.udemy.com/course/react-hooks). Section 5: Building a Complete CRUD APP with React Hooks and Section 6: Connecting our App to an API. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
