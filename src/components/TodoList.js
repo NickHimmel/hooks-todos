@@ -8,7 +8,7 @@ export default function TodoList() {
         "Nothing To Do!"
 
     return (
-        <div className="container mx-auto max-w-md text-center font-mono bg-yellow-300">
+        <div className="container mx-auto max-w-md text-center font-sans bg-yellow-300">
             <h1 className="font-bold text-3xl">{title}</h1>
             <ul className="list-reset text-white p-0 bg-orange-500">
                 {state.todos.map((todo) => (
