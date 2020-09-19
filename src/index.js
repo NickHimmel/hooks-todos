@@ -1,9 +1,9 @@
 import React, { useContext, useReducer } from 'react';
 import ReactDOM from 'react-dom';
+import './styles/tailwind.css';
 import * as serviceWorker from './serviceWorker';
 import TodosContext from './context';
 import todosReducer from './reducer';
-
 import TodoList from './components/TodoList'
 
 const App = () => {
