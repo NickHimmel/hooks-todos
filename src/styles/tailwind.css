@@ -414,7 +414,7 @@ ul {
  */
 
 html {
-  font-family: Montserrat, Helvetica, Arial, sans-serif; /* 1 */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -554,7 +554,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Cutive Mono, monospace;
 }
 
 /**
@@ -10185,8 +10185,8 @@ video {
   clear: none;
 }
 
-.font-sans {
-  font-family: Montserrat, Helvetica, Arial, sans-serif;
+.font-mono {
+  font-family: Cutive Mono, monospace;
 }
 
 .font-hairline {
@@ -31968,8 +31968,8 @@ video {
     clear: none;
   }
 
-  .sm\:font-sans {
-    font-family: Montserrat, Helvetica, Arial, sans-serif;
+  .sm\:font-mono {
+    font-family: Cutive Mono, monospace;
   }
 
   .sm\:font-hairline {
@@ -53686,8 +53686,8 @@ video {
     clear: none;
   }
 
-  .md\:font-sans {
-    font-family: Montserrat, Helvetica, Arial, sans-serif;
+  .md\:font-mono {
+    font-family: Cutive Mono, monospace;
   }
 
   .md\:font-hairline {
@@ -75404,8 +75404,8 @@ video {
     clear: none;
   }
 
-  .lg\:font-sans {
-    font-family: Montserrat, Helvetica, Arial, sans-serif;
+  .lg\:font-mono {
+    font-family: Cutive Mono, monospace;
   }
 
   .lg\:font-hairline {
@@ -97122,8 +97122,8 @@ video {
     clear: none;
   }
 
-  .xl\:font-sans {
-    font-family: Montserrat, Helvetica, Arial, sans-serif;
+  .xl\:font-mono {
+    font-family: Cutive Mono, monospace;
   }
 
   .xl\:font-hairline {

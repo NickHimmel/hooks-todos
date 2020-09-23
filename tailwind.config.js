@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      'sans': ['Montserrat', 'Helvetica', 'Arial', 'sans-serif']
+      'mono': ['Cutive Mono', 'monospace']
     }
   },
   variants: {},
