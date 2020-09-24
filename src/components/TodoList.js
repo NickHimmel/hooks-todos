@@ -3,9 +3,14 @@ import TodosContext from '../context'
 
 export default function TodoList() {
     const { state, dispatch } = useContext(TodosContext)
-    const title = state.todos.length > 0 
-        ? `${state.todos.length} Todos` :
+    const filteredTodos = state.todos.filter((todo) => !todo.complete)
+    const title = filteredTodos.length > 0 
+        ? `${filteredTodos.length} Todos` :
         "Nothing To Do!"
+
+    const handleDelete = (todo) => {
+        dispatch({ type: "DELETE_TODO", payload: todo })
+    }
 
     return (
         <div className="container mx-auto max-w-md font-mono p-8 tracking-wide">
@@ -20,8 +25,13 @@ export default function TodoList() {
                                 <span className="material-icons mr-2">{ todo.complete ? "check_circle_outline" : "radio_button_unchecked" }</span>
                                 <span className={`${todo.complete && "line-through text-gray-900"}`}>{todo.text}</span>
                             </button>
-                            <button className="flex items-center">
+                            <button className="flex items-center mr-5">
                                 <span className="material-icons text-gray-600">create</span>
+                            </button>
+                            <button 
+                                className="flex items-center"
+                                onClick={() => handleDelete(todo)}>
+                                <span className="material-icons text-gray-600">delete</span>
                             </button>
                         </div>
                         <span className="text-gray-500 text-sm">*******************************************</span>
