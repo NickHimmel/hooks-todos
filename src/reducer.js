@@ -14,6 +14,7 @@ export default function reducer(state, action) {
             )
             console.log(filteredTodos)
             return {
+                ...state,
                 todos: filteredTodos
             }
         default: 

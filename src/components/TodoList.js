@@ -3,8 +3,9 @@ import TodosContext from '../context'
 
 export default function TodoList() {
     const { state, dispatch } = useContext(TodosContext)
-    const title = state.todos.length > 0 
-        ? `${state.todos.length} Todos` :
+    const filteredTodos = state.todos.filter((todo) => !todo.complete)
+    const title = filteredTodos.length > 0 
+        ? `${filteredTodos.length} Todos` :
         "Nothing To Do!"
 
     const handleDelete = (todo) => {
