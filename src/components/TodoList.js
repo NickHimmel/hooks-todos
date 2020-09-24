@@ -23,6 +23,9 @@ export default function TodoList() {
                             <button className="flex items-center">
                                 <span className="material-icons text-gray-600">create</span>
                             </button>
+                            <button className="flex items-center">
+                                <span className="material-icons text-gray-600">delete</span>
+                            </button>
                         </div>
                         <span className="text-gray-500 text-sm">*******************************************</span>
                     </li>
