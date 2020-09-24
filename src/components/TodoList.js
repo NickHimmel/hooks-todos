@@ -7,6 +7,10 @@ export default function TodoList() {
         ? `${state.todos.length} Todos` :
         "Nothing To Do!"
 
+    const handleDelete = (todo) => {
+        dispatch({ type: "DELETE_TODO", payload: todo })
+    }
+
     return (
         <div className="container mx-auto max-w-md font-mono p-8 tracking-wide">
             <h1 className="text-5xl border-b-4 border-double border-black">{title}</h1>
@@ -20,10 +24,12 @@ export default function TodoList() {
                                 <span className="material-icons mr-2">{ todo.complete ? "check_circle_outline" : "radio_button_unchecked" }</span>
                                 <span className={`${todo.complete && "line-through text-gray-900"}`}>{todo.text}</span>
                             </button>
-                            <button className="flex items-center">
+                            <button className="flex items-center mr-5">
                                 <span className="material-icons text-gray-600">create</span>
                             </button>
-                            <button className="flex items-center">
+                            <button 
+                                className="flex items-center"
+                                onClick={() => handleDelete(todo)}>
                                 <span className="material-icons text-gray-600">delete</span>
                             </button>
                         </div>

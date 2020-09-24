@@ -8,6 +8,14 @@ export default function reducer(state, action) {
                 ...state,
                 todos: toggledTodos
             }
+        case "DELETE_TODO" :
+            const filteredTodos = state.todos.filter(t =>
+                (t.id !== action.payload.id)
+            )
+            console.log(filteredTodos)
+            return {
+                todos: filteredTodos
+            }
         default: 
          return state;
     }
