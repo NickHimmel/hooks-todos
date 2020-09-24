@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import TodosContext from '../context'
 
 export default function TodoList() {
-    const { state } = useContext(TodosContext)
+    const { state, dispatch } = useContext(TodosContext)
     const title = state.todos.length > 0 
         ? `${state.todos.length} Todos` :
         "Nothing To Do!"
@@ -13,12 +13,14 @@ export default function TodoList() {
             <ul className="list-reset p-0 mt-10">
                 {state.todos.map((todo) => (
                     <li key={todo.id} className="">
-                        <div className="flex items-center text-xl my-5">
-                            <button className="flex mr-2">
-                                <span className="material-icons">radio_button_unchecked</span>
+                        <div className="flex text-xl my-5">
+                            <button 
+                                className="flex items-center flex-1 focus:outline-none"
+                                onClick={() => dispatch({ type: "TOGGLE_TODO", payload: todo })}>
+                                <span className="material-icons mr-2">{ todo.complete ? "check_circle_outline" : "radio_button_unchecked" }</span>
+                                <span className={`${todo.complete && "line-through text-gray-900"}`}>{todo.text}</span>
                             </button>
-                            <span className="flex-1 cursor-pointer">{todo.text}</span>
-                            <button className="flex">
+                            <button className="flex items-center">
                                 <span className="material-icons text-gray-600">create</span>
                             </button>
                         </div>
