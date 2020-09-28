@@ -12,6 +12,11 @@ export default function reducer(state, action) {
             return {
                 ...state,
                 todos: addedTodos
+            };
+        case "SET_CURRENT_TODO" :
+            return {
+                ...state, 
+                currentTodo: action.payload
             }
         case "TOGGLE_TODO" :
             const toggledTodos = state.todos.map(t => 
@@ -20,7 +25,7 @@ export default function reducer(state, action) {
             return {
                 ...state,
                 todos: toggledTodos
-            }
+            };
         case "DELETE_TODO" :
             const filteredTodos = state.todos.filter(t =>
                 (t.id !== action.payload.id)
@@ -29,7 +34,7 @@ export default function reducer(state, action) {
             return {
                 ...state,
                 todos: filteredTodos
-            }
+            };
         default: 
          return state;
     }
