@@ -13,8 +13,8 @@ const App = () => {
   return (
     <TodosContext.Provider value={{ state, dispatch }}>
       <div className="container mx-auto max-w-md font-mono p-8">
-        <TodoForm />
         <TodoList />
+        <TodoForm />
       </div>
     </TodosContext.Provider>
   )
