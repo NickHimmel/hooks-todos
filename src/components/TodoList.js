@@ -19,7 +19,7 @@ export default function TodoList() {
             <h4 className="text-5xl border-b-4 border-double border-black">{title}</h4>
             <ul className="list-reset p-0 mt-10">
                 {state.todos.map((todo) => (
-                    <li key={todo.id} className="">
+                    <li key={todo.id}>
                         <div className="flex text-xl my-5">
                             <button 
                                 className="flex items-center flex-1 focus:outline-none"
@@ -38,11 +38,11 @@ export default function TodoList() {
                                 <span className="material-icons text-gray-600">delete</span>
                             </button>
                         </div>
-                        <form>
+                        <form className="flex my-5 hidden">
                             <input 
-                                className="border-b-2 border-double border-black"
+                                className="border-b-2 border-double border-black focus:outline-none flex-1 mr-4"
                                 type="text"/>
-                            <button>Edit Todo</button>
+                            <button className="border-2 border-solid border-gray-900 text-lg text-gray-900 uppercase w-2/5 h-12 tracking-wider">Edit Todo</button>
                         </form>
                         <span className="text-gray-500 text-sm">*******************************************</span>
                     </li>
