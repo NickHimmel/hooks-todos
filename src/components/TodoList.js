@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import Todo from './Todo'
+import TodoEdit from './TodoEdit'
 import TodosContext from '../context'
 
 export default function TodoList() {
@@ -16,12 +17,7 @@ export default function TodoList() {
                 {state.todos.map((todo) => (
                     <li key={todo.id}>
                         <Todo todo={todo}/>
-                        <form className="flex my-5">
-                            <input 
-                                className="border-b-2 border-double border-black focus:outline-none flex-1 mr-4"
-                                type="text"/>
-                            <button className="border-2 border-solid border-gray-900 text-lg text-gray-900 uppercase w-2/5 h-12 tracking-wider">Edit Todo</button>
-                        </form>
+                        <TodoEdit />
                         <span className="text-gray-500 text-sm">*******************************************</span>
                     </li>
                 ))}
