@@ -9,7 +9,7 @@ export default function Todo({ todo }) {
     }
 
     return (
-        <div className="flex text-xl my-5">
+        <div className="flex items-endei text-xl my-5 h-10">
             <div 
                 className="flex items-center flex-1 focus:outline-none cursor-pointer"
                 onClick={() => dispatch({ type: "TOGGLE_TODO", payload: todo })}>
@@ -17,7 +17,7 @@ export default function Todo({ todo }) {
                 <span className={`${todo.complete && "line-through text-gray-900"} tracking-wide`}>{todo.text}</span>
             </div>
             <button 
-                className="flex items-center mr-5"
+                className="flex items-center mr-5 focus:outline-none"
                 onClick={() => dispatch({ type: "SET_CURRENT_TODO", payload: todo })}>
                 <span className="material-icons text-gray-600">create</span>
             </button>
