@@ -12,13 +12,15 @@ export default function TodoForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form 
+            onSubmit={handleSubmit}
+            className="flex my-5">
             <input
-                className="border-2 border-solid border-black p-2 focus:outline-none mr-1 h-12"
+                className="border-b-2 border-double border-black focus:outline-none flex-1 mr-4 text-xl"
                 type="text"
                 onChange={event => setTodo(event.target.value)} 
                 value={todo}/>
-            <button className="bg-gray-900 text-lg text-white uppercase px-4 h-12 tracking-wider">Add todo</button>
+            <button className="border-2 border-solid border-gray-900 text-lg text-gray-900 uppercase w-2/5 h-12 tracking-wider focus:outline-none">Add todo</button>
         </form>
     )
 }
